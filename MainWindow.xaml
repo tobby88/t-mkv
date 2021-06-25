@@ -5,14 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:t_mkv"
         mc:Ignorable="d"
-        Title="t-mkv" Height="450" Width="800">
+        Title="t-mkv" Height="300" Width="500">
     <Grid>
         <TabControl x:Name="tabControl">
             <TabItem Header="Kopfdaten">
                 <Grid Background="#FFE5E5E5">
-                    <Button x:Name="btnChoose" Content="Auswählen" HorizontalAlignment="Left" Margin="719,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.278,-0.649" Height="24" Click="btnChoose_Click"/>
-                    <TextBox x:Name="boxPath" HorizontalAlignment="Left" Height="24" Margin="55,15,0,0" TextWrapping="Wrap" Text="(Dateipfad)" VerticalAlignment="Top" Width="659"/>
-                    <Label x:Name="lbFile" Content="Datei:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="24" RenderTransformOrigin="1.115,0.418"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="10" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="1" Grid.Column="1" x:Name="lbFile" Content="Datei:" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Top" Height="24" RenderTransformOrigin="1.115,0.418"/>
+                    <TextBox Grid.Row="1" Grid.Column="2" x:Name="boxPath" HorizontalAlignment="Stretch" Height="24" Margin="0,0,3,0" TextWrapping="Wrap" Text="(Dateipfad)" VerticalAlignment="Top"/>
+                    <Button Grid.Row="1" Grid.Column="3" x:Name="btnChoose" Content="Auswählen" HorizontalAlignment="Stretch" Margin="3,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.278,-0.649" Height="24" Click="btnChoose_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Sonstiges">
