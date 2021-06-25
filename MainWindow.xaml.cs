@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,16 @@ namespace t_mkv
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnChoose_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Matroska|*.mkv;*.mk3d;*.mka;*.mks";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                boxPath.Text = openFileDialog.FileName;
+            }
         }
     }
 }
