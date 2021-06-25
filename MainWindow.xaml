@@ -7,9 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnChoose" Content="Auswählen" HorizontalAlignment="Left" Margin="719,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.278,-0.649" Height="24" Click="btnChoose_Click"/>
-        <TextBox x:Name="boxPath" HorizontalAlignment="Left" Height="24" Margin="55,15,0,0" TextWrapping="Wrap" Text="(Dateipfad)" VerticalAlignment="Top" Width="659"/>
-        <Label x:Name="lbFile" Content="Datei:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="24" RenderTransformOrigin="1.115,0.418"/>
-
+        <TabControl x:Name="tabControl">
+            <TabItem Header="Kopfdaten">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnChoose" Content="Auswählen" HorizontalAlignment="Left" Margin="719,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.278,-0.649" Height="24" Click="btnChoose_Click"/>
+                    <TextBox x:Name="boxPath" HorizontalAlignment="Left" Height="24" Margin="55,15,0,0" TextWrapping="Wrap" Text="(Dateipfad)" VerticalAlignment="Top" Width="659"/>
+                    <Label x:Name="lbFile" Content="Datei:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="24" RenderTransformOrigin="1.115,0.418"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Sonstiges">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
